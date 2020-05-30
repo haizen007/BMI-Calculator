@@ -3,18 +3,19 @@ import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:get/get.dart';
 
 class ResultPage extends StatelessWidget {
-  final Color textResultLabelColor;
-  final String bmiResult;
-  final String textResult;
-  final String interpretation;
+  final double resultBMI;
+  final String resultLabel;
+  final Color resultLabelColor;
+  final String resultText;
 
   ResultPage({
-    @required this.textResultLabelColor,
-    @required this.bmiResult,
-    @required this.textResult,
-    @required this.interpretation,
+    @required this.resultBMI,
+    @required this.resultLabel,
+    @required this.resultLabelColor,
+    @required this.resultText,
   });
 
   @override
@@ -51,16 +52,16 @@ class ResultPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      textResult.toUpperCase(),
-                      style: kResultLabelTextStyle.apply(
-                          color: textResultLabelColor),
+                      resultLabel.toUpperCase(),
+                      style:
+                          kResultLabelTextStyle.apply(color: resultLabelColor),
                     ),
                     Text(
-                      bmiResult,
+                      resultBMI.toString(),
                       style: kBMITextStyle,
                     ),
                     Text(
-                      interpretation,
+                      resultText,
                       style: kBodyTextStyle,
                       textAlign: TextAlign.center,
                     ),
@@ -71,7 +72,7 @@ class ResultPage extends StatelessWidget {
             BottomButton(
               buttonTitle: 're-calculate'.tr(),
               onTap: () {
-                Navigator.pop(context);
+                Get.back();
               },
             )
           ],

@@ -48,8 +48,9 @@ const kActiveMeasureColorImperial = <Color>[
 // const kActiveMeasureColorMetric = Color(0x4524D876);
 // const kActiveMeasureColor = Color(0x5069f0ae);
 
-const kNormalColor = Color(0xFF24D876);
+const kSeverelyUnderweightColor = Color(0xFFEB1555);
 const kUnderweightColor = Color(0xFFffab00);
+const kNormalColor = Color(0xFF24D876);
 const kOverweightColor = Color(0xFFffab00);
 const kObeseColor = Color(0xFFEB1555);
 

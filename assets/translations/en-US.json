@@ -14,12 +14,14 @@
     "calculate": "CALCULATE",
     "re-calculate": "RE-CALCULATE",
     "resultTitle": "Your Result",
-    "resultObese": "Obese",
-    "resultOverweight": "Overweight",
-    "resultNormal": "Normal",
-    "resultUnderweight": "Underweight",
-    "resultObeseText": "Body Mass Index\n>= 30\n\nMuch higher than normal body weight.\nYou should exercise more!",
-    "resultOverweightText": "Body Mass Index\n>= 25 and <= 29.9\n\nHigher than normal body weight.\nTry to exercise more.",
-    "resultNormalText": "Body Mass Index\n>= 18.5 and <= 24.9\n\nGreat, you have normal body weight.\nKeep it like that ;)",
-    "resultUnderweightText": "Body Mass Index\n<= 18.5\n\nLower than normal body weight.\nYou can eat a bit more :)"
+    "resultLabelObese": "Obese",
+    "resultLabelOverweight": "Overweight",
+    "resultLabelNormal": "Normal",
+    "resultLabelUnderweight": "Underweight",
+    "resultLabelSeverelyUnderweight": "Severely Underweight",
+    "resultTextObese": "Body Mass Index\n>= 30.0\n\nMuch higher than normal body weight.\nYou should exercise more!",
+    "resultTextOverweight": "Body Mass Index\n>= 25.0 and <= 29.9\n\nHigher than normal body weight.\nTry to exercise more.",
+    "resultTextNormal": "Body Mass Index\n>= 18.5 and <= 24.9\n\nGreat, you have normal body weight.\nKeep it like that ;)",
+    "resultTextUnderweight": "Body Mass Index\n>= 17.0 and <= 18.4\n\nLower than normal body weight.\nYou can eat a bit more :)",
+    "resultTextSeverelyUnderweight": "Body Mass Index\n<= 16.9\n\nSeverely lower than normal body weight.\nYou should eat more!"
 }
