@@ -1,7 +1,7 @@
 import 'package:bmi_calculator/components/bottom_button.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
-import '../constants.dart';
+import '../utils/constants.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:get/get.dart';
 

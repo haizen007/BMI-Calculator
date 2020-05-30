@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-const double widthSizedBox = 10.0;
-const double heightSizedBox1 = 8.5;
-const double heightSizedBox2 = 6.5;
+const double kSizedBoxWidth = 10.0;
+const double kSizedBoxHeight1 = 8.5;
+const double kSizedBoxHeight2 = 6.5;
+
+const double kThumbShape = 12.5;
+const double kOverlayShape = 25.0;
 
 const kBottomContainerHeight = 65.0;
 const kBottomContainerColor = Color(0xFFEB1555);
@@ -52,27 +55,31 @@ const kSeverelyUnderweightColor = Color(0xFFEB1555);
 const kUnderweightColor = Color(0xFFffab00);
 const kNormalColor = Color(0xFF24D876);
 const kOverweightColor = Color(0xFFffab00);
-const kObeseColor = Color(0xFFEB1555);
+const kObese1Color = Color(0xFFEB1555);
+const kObese2Color = Color(0xFFEB1555);
+const kObese3Color = Color(0xFFEB1555);
 
-const double kDefaultWeightLBS = 165.5;
-const double kMinWeightLBS = 25;
-const double kMaxWeightLBS = 450;
-const int kDivWeightLBS = 850;
+const double kDefaultCm = 180;
+const double kMinCm = 25;
+const double kMaxCm = 250;
+const int kDivCm = 450;
 
-const double kDefaultWeightKGS = 75;
-const double kMinWeightKGS = 10;
-const double kMaxWeightKGS = 200;
-const int kDivWeightKGS = 380;
+const double kDefaultKgs = 75;
+const double kMinKgs = 10;
+const double kMaxKgs = 200;
+const int kDivKgs = 380;
 
-const double kDefaultHeightFT = 5.9;
-const double kMinHeightFT = 1.5;
-const double kMaxHeightFT = 7.5;
-const int kDivHeightFT = 60;
+const double kMinLbs = 25;
+const double kMaxLbs = 450;
+const int kDivLbs = 850;
 
-const double kDefaultHeightCM = 180;
-const double kMinHeightCM = 50;
-const double kMaxHeightCM = 225;
-const int kDivHeightCM = 350;
+const double kMinFeet = 1;
+const double kMaxFeet = 7;
+const int kDivFeet = 60;
+
+const double kMinInches = 0;
+const double kMaxInches = 12;
+const int kDivInches = 26; // 12 + 1 from (0 to 12) * 2 to fix the layout
 
 const kLabelTextStyle = TextStyle(
   fontSize: 18,

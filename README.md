@@ -1,27 +1,35 @@
-Version
-------------
+## Version
 
-1.1
+1.2
 
-Google Play
------------
+## Google Play
 
-Link: [BMI Calculator](https://play.google.com/store/apps/details?id=br.com.yonathan.bmicalculator)
+Link: [BMI Calculator & Converter](https://play.google.com/store/apps/details?id=br.com.yonathan.bmicalculator)
 
-Features
-------------
+## Features
 
-A powerful Body Mass Index Calculator - Metric and Imperial
+A powerful Body Mass Index (BMI) Calculator & Converter - Metric x Imperial
 
 ✔️ Body Mass Index<br>
-✔️ Imperial<br>
-✔️ Metric<br>
+✔️ BMI Result Explained<br>
+✔️ Convert Metric to Imperial<br>
+✔️ Convert Imperial to Metric<br>
+✔️ BMI calculation allows mixed Imperial and Metric values<br>
 
-* no internet connection required
+<!-- - no internet connection required -->
 
-ScreenShots
-------------
+## ScreenShots
 
-![alt-screenhot](/assets/images/screenshot-1.png "English")
+<!-- <center> -->
 
-![alt-screenhot](/assets/images/screenshot-2.png "Portuguese")
+#### English - US
+
+![alt-screenhot](/assets/images/screenshots-en-1.png "English")
+![alt-screenhot](/assets/images/screenshots-en-2.png "English")
+
+#### Portuguese - BR
+
+![alt-screenhot](/assets/images/screenshots-pt-1.png "Portuguese")
+![alt-screenhot](/assets/images/screenshots-pt-2.png "Portuguese")
+
+<!-- <center> -->

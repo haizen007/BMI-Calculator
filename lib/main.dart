@@ -46,7 +46,8 @@ class BMICalculator extends StatelessWidget {
         name: 'assets/animations/intro.flr',
         next: (context) => InputPage(),
         backgroundColor: Color(0xFF0A0E21),
-        until: () => Future.delayed(Duration(milliseconds: 500)),
+        // if intro.flr longer than Duration it will override the value
+        until: () => Future.delayed(Duration(milliseconds: 350)),
         startAnimation: '1',
       ),
       // InputPage(),
