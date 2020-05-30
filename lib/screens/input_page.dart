@@ -11,6 +11,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../constants.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:get/get.dart';
 
 enum Gender { male, female }
 enum MeasureWeight { lbs, kgs }
@@ -323,16 +324,13 @@ class _InputPageState extends State<InputPage> {
                   height: height,
                   weight: weight,
                 );
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ResultPage(
-                      bmiResult: calc.calculateBMI(
-                          selectedWeight, selectedHeight, weight, height),
-                      textResult: calc.getResult(),
-                      interpretation: calc.getInterpretation(),
-                      textResultLabelColor: calc.getResultColor(),
-                    ),
+                Get.to(
+                  ResultPage(
+                    resultBMI: calc.calculateBMI(
+                        selectedWeight, selectedHeight, weight, height),
+                    resultLabel: calc.getLabelResult(),
+                    resultLabelColor: calc.getLabelResultColor(),
+                    resultText: calc.getResultText(),
                   ),
                 );
               }

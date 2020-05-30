@@ -1,12 +1,12 @@
 Version
 ------------
 
-1.0
+1.1
 
 Google Play
 -----------
 
-Link: [BMI - Calculator](https://play.google.com/store/apps/details?id=br.com.yonathan.bmicalculator)
+Link: [BMI Calculator](https://play.google.com/store/apps/details?id=br.com.yonathan.bmicalculator)
 
 Features
 ------------
