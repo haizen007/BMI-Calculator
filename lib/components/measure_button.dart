@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class MeasureContent extends StatelessWidget {
+class MeasureButton extends StatelessWidget {
   final Function onPressed;
-  final List<Color> measureColor;
-  final Widget measureChild;
+  final List<Color> colors;
+  final Widget child;
 
-  MeasureContent({
+  MeasureButton({
     @required this.onPressed,
-    @required this.measureColor,
-    @required this.measureChild,
+    @required this.colors,
+    @required this.child,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 12.5, vertical: 0.0),
-      child: RaisedButton(
+      child: MaterialButton(
         elevation: 6.5,
         onPressed: onPressed,
         color: Colors.black38, // overlay
@@ -27,11 +27,11 @@ class MeasureContent extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 10.75),
           alignment: Alignment.center,
-          child: measureChild,
+          child: child,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
             gradient: LinearGradient(
-              colors: measureColor,
+              colors: colors,
               begin: FractionalOffset.topCenter,
               end: FractionalOffset.bottomCenter,
             ),
@@ -41,26 +41,3 @@ class MeasureContent extends StatelessWidget {
     );
   }
 }
-
-/**
- * to change back from RaisedButton to GestureDetector
- */
-// @override
-// Widget build(BuildContext context) {
-//   return GestureDetector(
-//     onTap: onTap,
-//     child: Container(
-//       alignment: Alignment.center,
-//       child: measureChild,
-//       margin: EdgeInsets.symmetric(horizontal: 12.5),
-//       padding: EdgeInsets.all(10),
-//       decoration: BoxDecoration(
-//         // color: measureColor,
-//         borderRadius: BorderRadius.circular(5),
-//         gradient: LinearGradient(
-//           colors: measureColor,
-//         ),
-//       ),
-//     ),
-//   );
-// }
