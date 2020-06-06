@@ -1,7 +1,7 @@
 import 'package:bmi_calculator/components/bottom_button.dart';
 import 'package:bmi_calculator/components/custom_slider.dart';
 import 'package:bmi_calculator/components/icon_content.dart';
-import 'package:bmi_calculator/components/measure_content.dart';
+import 'package:bmi_calculator/components/measure_button.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/components/round_icon_button.dart';
 import 'package:bmi_calculator/screens/result_page.dart';
@@ -61,7 +61,7 @@ class _InputPageState extends State<InputPage> {
     }
   }
 
-  // clicks on 'Ft + In' or 'Centimeters' shows the Slider depending of selectedHeight
+  // 'Ft + In' or 'Centimeters' shows the Slider depending of the selectedHeight
   Widget getCustomSlider() {
     if (selectedHeight == Height.imperial)
       return Row(
@@ -149,7 +149,7 @@ class _InputPageState extends State<InputPage> {
                         width: kSizedBoxWidth,
                       ),
                       Expanded(
-                        child: MeasureContent(
+                        child: MeasureButton(
                           onPressed: () {
                             setState(() {
                               // doesn't convert if it's already selected Imperial
@@ -167,10 +167,10 @@ class _InputPageState extends State<InputPage> {
                               }
                             });
                           },
-                          measureColor: selectedWeight == Weight.imperial
+                          colors: selectedWeight == Weight.imperial
                               ? kActiveMeasureColorImperial
                               : kInactiveMeasureColor,
-                          measureChild: Text('weightImperial'.tr(),
+                          child: Text('weightImperial'.tr(),
                               style: kMeasureTextStyle),
                         ),
                       ),
@@ -182,7 +182,7 @@ class _InputPageState extends State<InputPage> {
                         ),
                       ),
                       Expanded(
-                        child: MeasureContent(
+                        child: MeasureButton(
                           onPressed: () {
                             setState(() {
                               // doesn't convert if it's already selected Metric
@@ -200,10 +200,10 @@ class _InputPageState extends State<InputPage> {
                               }
                             });
                           },
-                          measureColor: selectedWeight == Weight.metric
+                          colors: selectedWeight == Weight.metric
                               ? kActiveMeasureColorMetric
                               : kInactiveMeasureColor,
-                          measureChild: Text('weightMetric'.tr(),
+                          child: Text('weightMetric'.tr(),
                               style: kMeasureTextStyle),
                         ),
                       ),
@@ -253,7 +253,7 @@ class _InputPageState extends State<InputPage> {
                         width: kSizedBoxWidth,
                       ),
                       Expanded(
-                        child: MeasureContent(
+                        child: MeasureButton(
                           onPressed: () {
                             setState(() {
                               // doesn't convert if it's already selected Imperial
@@ -266,20 +266,21 @@ class _InputPageState extends State<InputPage> {
                                 // convert the decimal part to inches (5.77 - 5.0) = 0.77
                                 inches = ((height - feet) * 12);
                                 // if converted Value is higher than Max
-                                if (feet >= kMaxFeet) {
+                                if (feet > kMaxFeet) {
                                   feet = kMaxFeet;
                                   inches = kMaxInches;
-                                } else if (feet <= kMinFeet) {
+                                  // if converted Value is lower than Min
+                                } else if (feet < kMinFeet) {
                                   feet = kMinFeet;
                                   inches = kMinInches;
                                 }
                               }
                             });
                           },
-                          measureColor: selectedHeight == Height.imperial
+                          colors: selectedHeight == Height.imperial
                               ? kActiveMeasureColorImperial
                               : kInactiveMeasureColor,
-                          measureChild: Text('heightImperial'.tr(),
+                          child: Text('heightImperial'.tr(),
                               style: kMeasureTextStyle),
                         ),
                       ),
@@ -300,7 +301,7 @@ class _InputPageState extends State<InputPage> {
                         ),
                       ),
                       Expanded(
-                        child: MeasureContent(
+                        child: MeasureButton(
                           onPressed: () {
                             setState(() {
                               // doesn't convert if it's already selected Metric
@@ -311,10 +312,10 @@ class _InputPageState extends State<InputPage> {
                               }
                             });
                           },
-                          measureColor: selectedHeight == Height.metric
+                          colors: selectedHeight == Height.metric
                               ? kActiveMeasureColorMetric
                               : kInactiveMeasureColor,
-                          measureChild: Text('heightMetric'.tr(),
+                          child: Text('heightMetric'.tr(),
                               style: kMeasureTextStyle),
                         ),
                       ),
